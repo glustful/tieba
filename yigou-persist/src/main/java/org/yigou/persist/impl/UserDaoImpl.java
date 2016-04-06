@@ -14,7 +14,7 @@ import org.yigou.persist.IUserDao;
 public class UserDaoImpl implements IUserDao{
 	@Autowired
 	SessionFactory sessionFactory;
-	@Override
+
 	public User findByUser(User user) {
 		Session session = sessionFactory.getCurrentSession();
 		Query query = session.createQuery("from User where userName=? and password=?");
@@ -26,5 +26,6 @@ public class UserDaoImpl implements IUserDao{
 		}
 		return null;
 	}
+	
 
 }

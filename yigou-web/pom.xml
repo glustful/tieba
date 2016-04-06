@@ -44,7 +44,7 @@
 	</dependencies>
 	<!-- maven打成war包放到tomcat目录下，即可运行 -->
 	<build>
-		<finalName>一元购</finalName>
+		<finalName>yigou-web</finalName>
 
 		<plugins>
 			<!-- define the project compile level -->

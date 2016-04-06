@@ -3,8 +3,10 @@ package org.yigou.controller;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,6 +48,15 @@ public class UserController {
 		ModelMap mm = new ModelMap();
 		mm.addAttribute("success", true);
 		return mm;
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/picture ", method = RequestMethod.GET)
+	public String picture(){
+		ModelMap mm = new ModelMap();
+		return "{\"data\":[{\"thumb\":\"1.jpg\",\"large\":\"1.jpg\"},{\"thumb\":\"1.jpg\",\"large\":\"1.jpg\"},{\"thumb\":\"1.jpg\",\"large\":\"1.jpg\"},{\"thumb\":\"1.jpg\",\"large\":\"1.jpg\"},{\"thumb\":\"1.jpg\",\"large\":\"1.jpg\"}]}";
+		
+		//return mm;
 	}
 	
 	private void setCookie(HttpServletRequest req,HttpServletResponse rsp) {

@@ -44,7 +44,7 @@
 	</dependencies>
 	<!-- maven打成war包放到tomcat目录下，即可运行 -->
 	<build>
-		<finalName>yigou-web</finalName>
+		<finalName>tieba</finalName>
 
 		<plugins>
 			<!-- define the project compile level -->

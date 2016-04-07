@@ -17,6 +17,8 @@ import org.yigou.service.ITopicService;
 @RequestMapping(value = "/topic")
 public class TopicController {
 
+	private int defaultPage = 0;
+	private int defaultSize = 10;
 	@Autowired
 	ITopicService topicService;
 
@@ -45,8 +47,14 @@ public class TopicController {
 	@ResponseBody
 	@RequestMapping(value="/query",method=RequestMethod.GET)
 	public Object query(String page,String pageSize){
-		int p1 = Integer.parseInt(page);
-		int p2 = Integer.parseInt(pageSize);
+		int p1 = defaultPage;
+		int p2 = defaultSize;
+		try {
+			p1 = Integer.parseInt(page);
+			p2 = Integer.parseInt(pageSize);
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 		ArrayList<Topic> result = (ArrayList<Topic>) topicService.query(p1,p2); 
 		ModelMap mm = new ModelMap();
 		//if(result==null)

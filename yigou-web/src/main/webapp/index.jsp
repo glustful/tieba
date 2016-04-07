@@ -154,11 +154,11 @@
 	</form>
 	<div id="uploadfileQueue" style="margin: 10px;"></div>
 
-	<input type="file" id="file_upload" name="file_upload" >
+	<input type="file" id="file_upload" name="file_upload" hidden="hidden" >
 	<div style="margin: 10px;">
-	<a href="javascript:$('#file_upload').uploadify('upload','*')">上传图片</a>
+	<a href="javascript:$('#file_upload').uploadify('upload','*')" hidden="hidden">上传图片</a>
 
-	<a href="javascript:$('#file_upload').uploadify('cancel','*')">取消上传</a>
+	<a href="javascript:$('#file_upload').uploadify('cancel','*')" hidden="hidden">取消上传</a>
 	<a href="javascript:commit()">发布</a>
 	</div>
 	</div>

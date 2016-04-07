@@ -106,9 +106,7 @@
 				background: rgba(0,0,0,.1);
 				filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#1a000000,endcolorstr=#1a000000,gradientType=1);
 			}
-			user agent stylesheetdiv {
-				display: block;
-			}
+
 			.article-commentbar .share-btn-box .layer-inner {
 				width: 143px;
 				height: 36px;
@@ -184,17 +182,13 @@
 				zoom: 1;
 				float: left;
 			}
-			user agent stylesheetdiv {
-				display: block;
-			}
+
 			.article-commentbar .good-btn-box, .article-commentbar .bad-btn-box {
 				position: relative;
 				zoom: 1;
 				float: left;
 			}
-			user agent stylesheetdiv {
-				display: block;
-			}
+
 
 		</style>
 
